@@ -23,7 +23,7 @@ export default ({ data }) => {
           type: 'fraction',
           clickable:"true"
         }}
-        navigation={{ nextE1: ".arrow-left", prevE1: ".arrow-right" }}
+        navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
         virtual
       >
         {data.map((cardData) => (
