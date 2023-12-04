@@ -11,12 +11,13 @@ export default ({navId,title, data})=>{
         <h1 className='section-toggle-btn' 
         onClick={()=>setIsCollapsed(!isCollapsed)}>{isCollapsed ? 'Show All':'Collapse'}</h1>
         </div>
-        {isCollapsed? <Carousel navId={navId} data={data}/> :<div className='card-container'>
+        {isCollapsed? <Carousel navId={navId} data={data} /> :<div className='card-container'>
         {data.map(cardData=> (<Card 
                 key={cardData.id}
                 imgSrc={cardData.image}
                 label={cardData.title}
                 followersCount={cardData.follows}
+                Songnum={cardData.songs.length}
                />) )}
             </div>}
     </div>)

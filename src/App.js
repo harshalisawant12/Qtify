@@ -44,8 +44,8 @@ function App() {
        <Navbar/>
 
        <HeroSection/>
-       <Section navId='tal' title='Top Albums' data={topAlbums}/>
-       <Section navId='newal' title='New Albums' data={newAlbums}/>
+       <Section navId='tal' title='Top Albums' data={topAlbums} />
+       <Section navId='newal' title='New Albums' data={newAlbums} />
        <FilterSection title='Songs' data={FilteredSongs} filters={genres}
        executeFilter={(genres)=>{
         if(genres==='all'){
