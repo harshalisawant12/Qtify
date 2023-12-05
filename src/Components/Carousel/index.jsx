@@ -32,6 +32,7 @@ export default ({ navId,data }) => {
               imgSrc={cardData.image}
               label={cardData.title}
               followersCount={cardData.follows}
+            
             />{" "}
           </SwiperSlide>
         ))}

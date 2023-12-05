@@ -2,18 +2,31 @@ import { red } from "@mui/material/colors";
 import Button from "../Button";
 import { ReactComponent as SearchIcon } from "./Search-icon.svg";
 import Menu from "../Menu";
+import {useState} from 'react';
+
 export default () => {
+  const [suggestion, setSuggestion]=useState("none");
+  const changeSuggestion= (e)=>{
+    if (e.target.value===undefined)
+    {
+       setSuggestion("none");
+
+    }
+    else{
+      setSuggestion("block");
+    }
+  }
   return (
     <div>
       <form
         style={{
           display: "flex",
-          minWidth: "568px",
-          
+          minWidth: "568px",   
         }}
       >
         <input
           placeholder="Search and album of your choice"
+          onChange={()=>setSuggestion("block")}
           style={{
             flex: 1,
             borderRadius: "8px 0px 0px 8px",
@@ -34,7 +47,11 @@ export default () => {
           <SearchIcon />
         </button>
       </form>
-      <Menu data={[1,2,3]}/>
+      <div style={{
+  display:`${suggestion}`
+ }}>
+ <Menu data={[1,2,3]}/>
+ </div>
    </div>
   )
 }

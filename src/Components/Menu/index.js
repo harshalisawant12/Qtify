@@ -49,8 +49,9 @@ export default ({data}) => {
   return (
     <div
       style={{
-        display:'none',
+    
         position: `absolute`,
+
         width: "569px",
         maxHeight: "500px",
         border: "5px solid red",
